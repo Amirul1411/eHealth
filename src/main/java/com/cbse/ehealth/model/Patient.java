@@ -10,6 +10,9 @@ import jakarta.persistence.Table;
 @Table(name = "patient")
 public class Patient {
 
+	public static final String GENDER_MALE = "Male";
+	public static final String GENDER_FEMALE = "Female";
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -17,12 +20,6 @@ public class Patient {
 	private String name;
 
 	private int age;
-
-	@Override
-	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", age=" + age + ", gender=" + gender + ", contact=" + contact
-				+ ", medical_history=" + medical_history + "]";
-	}
 
 	private String gender;
 
@@ -33,14 +30,20 @@ public class Patient {
 	public Patient() {
 	}
 
-	public Patient(Long id, String name, int age, String gender, String contact, String medical_history) {
-		super();
-		this.id = id;
+	public Patient(String name, int age, String gender, String contact, String medical_history) {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 		this.contact = contact;
 		this.medical_history = medical_history;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -83,4 +86,9 @@ public class Patient {
 		this.medical_history = medical_history;
 	}
 
+	@Override
+	public String toString() {
+		return "Patient [id=" + id + ", name=" + name + ", age=" + age + ", gender=" + gender + ", contact=" + contact
+				+ ", medical_history=" + medical_history + "]";
+	}
 }
