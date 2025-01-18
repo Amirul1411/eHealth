@@ -33,17 +33,6 @@ import com.cbse.ehealth.service.SupplyService;
 @SpringBootApplication
 public class EhealthApplication {
 
-//	private final PaymentComponent paymentComponent;
-//	private final ScheduleComponent scheduleComponent;
-//	private final SupplyComponent supplyComponent;
-//
-//	public EhealthApplication(PaymentComponent paymentComponent, ScheduleComponent scheduleComponent,
-//			SupplyComponent supplyComponent) {
-//		this.paymentComponent = paymentComponent;
-//		this.scheduleComponent = scheduleComponent;
-//		this.supplyComponent = supplyComponent;
-//	}
-
 	@Autowired
 	private PaymentService paymentService;
 
