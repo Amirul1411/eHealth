@@ -331,7 +331,7 @@ public class EhealthApplication {
 					System.out.println("\nMain Menu:");
 					System.out.println("1 - Profile Page");
 					System.out.println("2 - Patient Management");
-					System.out.println("3 - View shifts");
+					System.out.println("3 - Staff Management");
 					System.out.println("4 - Logout");
 					System.out.print("Choose an option: ");
 
